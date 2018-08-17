@@ -4,7 +4,7 @@
   <ul class="post-archive">
     <% page.posts.each(function (post) { %>
       <li class="post-item">
-        <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+        <a class="post-title" href="<%- url_for(post.path) %>" target="_blank"><%= post.title %></a>
         <time class="post-date"><%= date(post.date, "YYYY-MM-DD") %></time>
       </li>
     <% }) %>
