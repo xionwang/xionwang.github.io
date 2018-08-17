@@ -2,7 +2,7 @@
 favicon: /favicon.ico
 
 # SEO
-keywords: 生活,博客,前端,游戏
+keywords:
 
 # Site title separator
 separator: '-'
@@ -12,12 +12,13 @@ rss: /atom.xml
 
 # SNS config
 sns:
-  Blog: /archives
-  GitHub: https://github.com/chunqiuyiyu
-  V2EX: https://www.v2ex.com/member/chunqiuyiyu
+  Blog: /blog
+  Weibo: https://www.weibo.com/romanchelsea
+  ZhiHu: https://www.zhihu.com/people/romanchelsea
+  GitHub: https://github.com/romanchelsea
 
 # Nav menu
 menu:
   Home: /
-  Archives: /archives
+  Archives: /blog
   About: /about
