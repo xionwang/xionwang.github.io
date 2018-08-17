@@ -13,13 +13,17 @@ $(document).ready(function() {
 
 <div class="home">
   <div class="info">
-    <a href="/" class="logo"><%= config.title %></a>
-    <div class="subtitle"><%= config.subtitle || '' %></div>
-    <div class="sns">
-      <% for (let item in theme.sns) { %>
-          <a href="<%- url_for(theme.sns[item]) %>"><%= item %></a>
-      <% } %>
+    <div class="wrap">
+      <a href="/" class="logo"><%= config.title %></a>
+      <div class="subtitle"><%= config.subtitle || '' %></div>
+      <hr/>
+      <div class="sns">
+        <% for (let item in theme.sns) { %>
+            <a href="<%- url_for(theme.sns[item]) %>" target="_blank"><%= item %></a>
+        <% } %>
+      </div>
+      <hr/>
+      <%- partial('_partial/footer') %>
     </div>
-    <%- partial('_partial/footer') %>
   </div>
 </div>

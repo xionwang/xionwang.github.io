@@ -1,10 +1,12 @@
+@import '_variables';
+
 body {
   margin: 0;
 }
 
 html, body, .container {
   height: 100%;
-  font-family: 'Playfair Display', Hiragino Sans GB, Microsoft YaHei, WenQuanYi, Airal, sans-serif;
+  font-family: 'Playfair Display', Hiragino Sans GB, STXingkai, Microsoft YaHei, WenQuanYi, Arial, sans-serif;
   color: #444;
 }
 
@@ -16,6 +18,10 @@ html, body, .container {
 a {
   color: #000;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .home {
@@ -27,15 +33,27 @@ a {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+    font-family: 'Open Sans', 'STXihei', 'Hiragino Sans GB', STHeiti, sans-serif;
+
+    .wrap {
+      display: inline-block;
+      width: 50%;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1em;
+      border-radius: 0.5em;
+      color: #fefefe !important;
+    }
 
     .logo {
-      font-size: 2.5em;
+      font-size: 1.5em;
       font-weight: bold;
+      color: color-index;
     }
 
     .subtitle {
       font-size: 14px;
-      color: gray;
+      color: color-index;
     }
 
     .sns {
@@ -43,18 +61,20 @@ a {
 
       a {
         width: 55px;
-        color: #999;
+        color: color-index;
         display: inline-block;
 
         &:hover {
+          background: color-index;
           color: #000;
+          border-radius: 0.5em;
         }
       }
     }
 
     footer {
       border: 0;
-      color: #000;
+      color: color-index;
       padding: 0;
     }
   }
