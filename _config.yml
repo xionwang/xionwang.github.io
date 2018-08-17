@@ -81,3 +81,5 @@ deploy:
   type: git
   repo: git@github.com:romanchelsea/romanchelsea.github.io.git
   branch: master
+
+disqus_shortname: romanwang-1
