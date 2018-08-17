@@ -1,7 +1,7 @@
 <script>
 $(document).ready(function() {
   console.log("Getting Bing daily image");
-  $.get("http://www.bing.com/HPImageArchive.aspx", {format: "js", idx: 0, n: 1, mkt: "en-US"}, function(data) {
+  $.get("http://www.bing.com/HPImageArchive.aspx", {format: "js", idx: Math.floor(Math.random() * 7), n: 1}, function(data) {
     res = data;
     $('body').css("background-image", 'url(' + "https://www.bing.com" + res.images[0].url + ')');
     $('body').css("background-repeat", "no-repeat");
