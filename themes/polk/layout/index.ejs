@@ -1,3 +1,16 @@
+<script>
+$(document).ready(function() {
+  console.log("Getting Bing daily image");
+  $.get("http://www.bing.com/HPImageArchive.aspx", {format: "js", idx: 0, n: 1, mkt: "en-US"}, function(data) {
+    res = data;
+    $('body').css("background-image", 'url(' + "https://www.bing.com" + res.images[0].url + ')');
+    $('body').css("background-repeat", "no-repeat");
+    $('body').css("background-size", "cover")
+  });
+  console.log("Done getting Bing daily image");
+});
+</script>
+
 <div class="home">
   <div class="info">
     <a href="/" class="logo"><%= config.title %></a>
