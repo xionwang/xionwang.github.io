@@ -1,6 +1,7 @@
 ---
 title: South Manhattan Memories I
 date: 2016-01-04 00:31:24
+published: false
 tags:
   - Diary
   - Opinion
