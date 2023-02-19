@@ -13,9 +13,10 @@ rss: /atom.xml
 # SNS config
 sns:
   Blog: /blog
-  Twitter: https://twitter.com/sea35xiongwe
-  Weibo: https://www.weibo.com/romanchelsea
-  Zhihu: https://www.zhihu.com/people/romanchelsea
+  Twitter: https://twitter.com/1812_boren
+  # Weibo: https://www.weibo.com/romanchelsea
+  # Zhihu: https://www.zhihu.com/people/romanchelsea
+  About: /about
 
 # Nav menu
 menu:
