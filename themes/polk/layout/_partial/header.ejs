@@ -1,13 +1,17 @@
 <header class="header">
   <div class="blog-title">
-    <a href="<%- url_for() %>" class="_blank" class="logo"><%= config.title %></a>
-    <div class="subtitle"><%= config.subtitle || '' %></div>
+    <a href="<%- url_for() %>" class="_blank" class="logo">
+      <%= config.title %>
+    </a>
+    <div class="subtitle">
+      <%= config.subtitle || '' %>
+    </div>
   </div>
   <nav class="navbar">
     <ul class="menu">
       <% for (name in theme.menu) { %>
         <li class="menu-item">
-          <a href="<%- url_for(theme.menu[name]) %>" target="_blank" class="menu-item-link"><%- __(name) %></a>
+          <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><%- __(name) %></a>
         </li>
       <% } %>
     </ul>

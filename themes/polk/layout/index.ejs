@@ -12,7 +12,11 @@
       <hr/>
       <div class="sns">
         <% for (let item in theme.sns) { %>
-            <a href="<%- url_for(theme.sns[item]) %>" target="_blank"><%= item %></a>
+          <% if (item == "Twitter" ) { %>
+            <a href="<%- url_for(theme.sns[item]) %>" target="_blank" ><%= item %></a>
+          <% } else { %>
+            <a href="<%- url_for(theme.sns[item]) %>""><%- item %></a>
+          <% } %>
         <% } %>
       </div>
       <hr/>
