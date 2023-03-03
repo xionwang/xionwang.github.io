@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Noto_Sans_SC;
+  src: url("fonts/Noto_Sans_SC/NotoSansSC-Regular.otf") format("opentype");
+}
 body {
   margin: 0;
   background: #fdf6e3;
@@ -8,7 +12,7 @@ html,
 body,
 .container {
   height: 100%;
-  font-family: 'Roboto', STKaiti, KaiTi, 'Hiragino Sans GB', STXingkai, Microsoft YaHei, WenQuanYi, Arial, sans-serif;
+  font-family: 'Roboto', Noto_Sans_SC, STKaiti, KaiTi, 'Hiragino Sans GB', STXingkai, Microsoft YaHei, WenQuanYi, Arial, sans-serif;
   color: #444;
 }
 .container {
