@@ -1,6 +1,6 @@
 @font-face {
   font-family: Noto_Sans_SC;
-  src: url("fonts/Noto_Sans_SC/NotoSansSC-Regular.otf") format("opentype");
+  src: url("/fonts/Noto_Sans_SC/NotoSansSC-Regular.otf") format("opentype");
 }
 body {
   margin: 0;
