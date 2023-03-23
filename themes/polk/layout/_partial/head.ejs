@@ -29,6 +29,8 @@
   <% if (config.description){ %>
     <meta name="description" content="<%= config.description %>">
   <% } %>
+
+  <%- autoCanonical(config, page) %>
   
   <% if (theme.favicon){ %>
     <link rel="shortcut icon" type="image/x-icon" href="<%= url_for(theme.favicon) %>?v=1.02">
