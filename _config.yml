@@ -96,10 +96,11 @@ nofollow:
     - guest1.com
     - guest2.com
 
-feed:
-  type: rss2 //feed의 종류(atom/rss2) * I recommend to write rss2
-  path: rss2.xml //Path where feed will be generated
-  limit: 20 //Set the latest number of posts (0 or false is the entire post)
+# Doesn't work, cause build failure
+# feed:
+#   type: rss2 //feed의 종류(atom/rss2) * I recommend to write rss2
+#   path: rss2.xml //Path where feed will be generated
+#   limit: 20 //Set the latest number of posts (0 or false is the entire post)
 
 sitemap:
   path: sitemap.xml //Path where sitemap will be generated
