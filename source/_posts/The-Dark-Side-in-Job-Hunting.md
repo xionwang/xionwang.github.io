@@ -1,5 +1,5 @@
 ---
-title: The Dark Side in Job Hunting
+title: The dark side in job hunting
 date: 2015-11-10 00:33:34
 tags:
   - Amazon

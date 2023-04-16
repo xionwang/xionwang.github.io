@@ -7,7 +7,7 @@ date: 2023-02-19 16:52:43
 
 My name is Xiongwei, and I was born in Wuhan, China. Now I work as a Software Developer, living in Seattle, WA.
 
-You can reach my Gmail at `python3 -c 'print("".join(["wang", "roman"][1::-1] + [str(n) for n in [8] * 3]))'`.
+You can reach my Gmail at `python3 -c 'print("".join(["wang", "roman"][1::-1] + [str(n) for n in [pow(2,3)] * 3]))'`.
 
 ### Work Experiences
 * Google (2021 -- 2023)
