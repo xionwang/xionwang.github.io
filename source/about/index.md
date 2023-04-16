@@ -10,7 +10,7 @@ My name is Xiongwei, and I was born in Wuhan, China. Now I work as a Software De
 You can reach my Gmail at `python3 -c 'print("".join(["wang", "roman"][1::-1] + [str(n) for n in [8] * 3]))'`.
 
 ### Work Experiences
-* Google (2021 -- Present)
+* Google (2021 -- 2023)
 * Oracle Cloud Infrastructure (2018 -- 2021)
 * Amazon Web Services (2016 -- 2018)
 
