@@ -15,7 +15,7 @@ timezone: America/Los_Angeles
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://romanchelsea.github.io
 root: /
-permalink: :year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -91,10 +91,8 @@ robotstxt:
   sitemap: https://romanchelsea.github.io/sitemap.xml
 
 nofollow:
-  enable: true //Plug-in enabled or disabled
-  exclude: //host to exclude
-    - guest1.com
-    - guest2.com
+  enable: true
+  exclude:
 
 # Doesn't work, cause build failure
 # feed:
@@ -103,6 +101,6 @@ nofollow:
 #   limit: 20 //Set the latest number of posts (0 or false is the entire post)
 
 sitemap:
-  path: sitemap.xml //Path where sitemap will be generated
-  tag: false //whether the tag is included in the sitemap
-  category: false //Whether to include a category in sitemap
+  path: sitemap.xml 
+  tag: false
+  category: false
