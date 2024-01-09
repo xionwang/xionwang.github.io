@@ -13,7 +13,7 @@ timezone: America/Los_Angeles
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://romanchelsea.github.io
+url: https://xionwang.github.io
 root: /
 permalink: /:year/:month/:day/:title/
 permalink_defaults:
@@ -79,7 +79,7 @@ theme: polk
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:romanchelsea/romanchelsea.github.io.git
+  repo: git@github.com:xionwang/xionwang.github.io.git
   branch: master
 
 disqus_shortname: romanwang-1
@@ -88,7 +88,7 @@ robotstxt:
   useragent: "*"
   allow:
    - /
-  sitemap: https://romanchelsea.github.io/sitemap.xml
+  sitemap: https://xionwang.github.io/sitemap.xml
 
 nofollow:
   enable: true
