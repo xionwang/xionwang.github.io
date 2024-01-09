@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Xiongwe</title>
+  <title>Xiongwe&#39;s blog</title>
   
   <subtitle>my rants and some random memories</subtitle>
-  <link href="https://romanchelsea.github.io/atom.xml" rel="self"/>
+  <link href="https://xionwang.github.io/atom.xml" rel="self"/>
   
-  <link href="https://romanchelsea.github.io/"/>
+  <link href="https://xionwang.github.io/"/>
   <updated>2023-02-24T09:51:03.738Z</updated>
-  <id>https://romanchelsea.github.io/</id>
+  <id>https://xionwang.github.io/</id>
   
   <author>
     <name>Roman Wang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Tech interview is a mind game nowadays</title>
-    <link href="https://romanchelsea.github.io/2023/02/24/Tech-interview-is-a-mind-game-nowadays/"/>
-    <id>https://romanchelsea.github.io/2023/02/24/Tech-interview-is-a-mind-game-nowadays/</id>
+    <link href="https://xionwang.github.io/2023/02/24/Tech-interview-is-a-mind-game-nowadays/"/>
+    <id>https://xionwang.github.io/2023/02/24/Tech-interview-is-a-mind-game-nowadays/</id>
     <published>2023-02-24T09:12:43.000Z</published>
     <updated>2023-02-24T09:51:03.738Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>最近跳槽的一点感受</title>
-    <link href="https://romanchelsea.github.io/2021/07/09/thoughts-on-recent-job-hunts/"/>
-    <id>https://romanchelsea.github.io/2021/07/09/thoughts-on-recent-job-hunts/</id>
+    <link href="https://xionwang.github.io/2021/07/09/thoughts-on-recent-job-hunts/"/>
+    <id>https://xionwang.github.io/2021/07/09/thoughts-on-recent-job-hunts/</id>
     <published>2021-07-09T12:23:20.000Z</published>
     <updated>2023-02-19T13:43:06.984Z</updated>
     
@@ -59,8 +59,8 @@
   
   <entry>
     <title>The dark side in job hunting</title>
-    <link href="https://romanchelsea.github.io/2015/11/10/The-Dark-Side-in-Job-Hunting/"/>
-    <id>https://romanchelsea.github.io/2015/11/10/The-Dark-Side-in-Job-Hunting/</id>
+    <link href="https://xionwang.github.io/2015/11/10/The-Dark-Side-in-Job-Hunting/"/>
+    <id>https://xionwang.github.io/2015/11/10/The-Dark-Side-in-Job-Hunting/</id>
     <published>2015-11-10T08:33:34.000Z</published>
     <updated>2023-03-23T08:45:02.102Z</updated>
     
@@ -75,9 +75,9 @@
     
     
     
-    <category term="Amazon" scheme="https://romanchelsea.github.io/tags/Amazon/"/>
+    <category term="Amazon" scheme="https://xionwang.github.io/tags/Amazon/"/>
     
-    <category term="Job" scheme="https://romanchelsea.github.io/tags/Job/"/>
+    <category term="Job" scheme="https://xionwang.github.io/tags/Job/"/>
     
   </entry>
   
