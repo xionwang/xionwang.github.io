@@ -20,6 +20,6 @@ sns:
 
 # Nav menu
 menu:
-  Home: /
-  Blog: /blog
+  # Home: /
+  # Blog: /blog
   About: /about

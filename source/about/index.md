@@ -5,7 +5,7 @@ date: 2023-02-19 16:52:43
 
 ## Bio
 
-My name is Xiongwei, and I was born in Wuhan, China. Now I work as a Software Developer, living in Seattle, WA.
+My name is Roman, and I was born in Wuhan, China. I work as a Software Developer, living in the Greater Seattle Area in the USA.
 
 You can reach my Gmail at `python3 -c 'print("".join(["wang", "roman"][1::-1] + [str(n) for n in [pow(2,3)] * 3]))'`.
 
@@ -19,5 +19,5 @@ You can reach my Gmail at `python3 -c 'print("".join(["wang", "roman"][1::-1] + 
 * Huazhong University of Science and Technology, B.E. (2009 -- 2013)
 
 ## My Footprints
-<iframe src="https://www.google.com/maps/d/embed?mid=1DhfH5HWB91h5FKLdAux5sbCSWSRfP5E&ehbc=2E312F" width="100%" height="480"></iframe>
+<iframe src="https://www.google.com/maps/d/embed?mid=1DhfH5HWB91h5FKLdAux5sbCSWSRfP5E&ehbc=2E312F" style="width: 100%; aspect-ratio: 3 / 2;"></iframe>
 

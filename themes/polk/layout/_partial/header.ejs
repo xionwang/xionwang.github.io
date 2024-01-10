@@ -1,19 +1,10 @@
-<header class="header">
-  <div class="blog-title">
-    <a href="<%- url_for() %>" class="_blank" class="logo">
-      <%= config.title %>
-    </a>
-    <div class="subtitle">
-      <%= config.subtitle || '' %>
-    </div>
-  </div>
-  <nav class="navbar">
-    <ul class="menu">
+<header class="bg-gray-800 text-white p-4">
+  <nav class="flex justify-between items-center">
+    <h1 class="text-2xl font-bold"><a href="/" class="hover:text-gray-300"><%= config.title %></a></h1>
+    <ul class="flex space-x-4">
       <% for (name in theme.menu) { %>
-        <li class="menu-item">
-          <a href="<%- url_for(theme.menu[name]) %>" class="menu-item-link"><%- __(name) %></a>
-        </li>
-      <% } %>
+        <li><a href="<%- url_for(theme.menu[name]) %>" class="hover:text-gray-300"><%= name %></a></li>
+      <% } %>   
     </ul>
   </nav>
 </header>
