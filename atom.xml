@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Xiongwe&#39;s blog</title>
+  <title>Roman Wang</title>
   
   <subtitle>my rants and some random memories</subtitle>
   <link href="https://xionwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://xionwang.github.io/"/>
-  <updated>2023-02-24T09:51:03.738Z</updated>
+  <updated>2024-01-10T05:36:28.597Z</updated>
   <id>https://xionwang.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://xionwang.github.io/2023/02/24/Tech-interview-is-a-mind-game-nowadays/"/>
     <id>https://xionwang.github.io/2023/02/24/Tech-interview-is-a-mind-game-nowadays/</id>
     <published>2023-02-24T09:12:43.000Z</published>
-    <updated>2023-02-24T09:51:03.738Z</updated>
+    <updated>2024-01-10T05:36:28.597Z</updated>
     
     <content type="html"><![CDATA[<p>Yes, I am creating yet another post about tech interviews, because I am looking for a new job, again. I have to, because as you may know, all big names are doing layoffs nowaways, starting from Meta’s since last November.</p><p>When I graduated in 2015, Leetcode had 200 or 300-ish coding questions. When I was looking a job in 2018, the count was probably 800+, and the number might be 1600+ in 2021. As the time of writing, it’s 2573. The numbers do speak, that coding interviews for Software Engineer positions are definitely getting out of control. Completing all 2k+ questions doesn’t sound like a realistic goal, especially for job seekers who have very limited timeframe. </p><p>On the other hand, I did get entitled interviewers who was calling those who could only do LC questions code monkey. Although I was not a 100% code monkey, I could feel the insecurity from the interviwers. You call other folks code monkeys because you can’t even solve straightforward questions. C’mon, you were bragging about “I’d prefer solve real world, production problems”, because that’s what you’ve been grinding on. Like nobody is supposed to master kubernetes as a deployment system, if that’s a hard requirement, you guys are missing pretty much all candidates from AWS and Google, because they probably use internal systems like Borg, Nebula, ECS, Fargate, etc.</p><p>In my opinion, conducting coding interviews with LC-style questions is by far the most fair way. We all have to master common data structures, patterns, algorithms. So, as a suggestion for interviewees, be smart on griding LC questions.</p><p>Skip questions that might not be asked. </p><ul><li>Some questions are too hard. I bet most non-code monkey interviewers can’t do it either.</li><li>Or they just simply don’t want you. (See below screenshot)</li></ul><p><a href="https://leetcode.com/problems/sum-of-two-integers/editorial/" target="_blank"><img src="/images/20230224.png"></a></p><p>Always believe in yourself, that your coding ability is stronger than the interviewer, and tell yourself, “This guy who’s interviewing me is a fking dumb-ass. My LC contest ranking is 5% of the world. You know nothing about coding at all, snowflake!”.</p><p>The same situation goes for system design related questions.</p><p>In real work, your interviewer might be creating CRUD applications on a daily basis, or writing unit test every night to improve the coverage from 75% to 80%. And you are expected to design a highly scalable, durable and available service that serves 100M daily actively users globally, with read and write heavy traffic, and should handle 5x traffic spikes, without losing data or customers’ money or impacting revenue. Lmao.</p><p>Another funny thing is that a lot of buzzwords are used excessively in system design prep materials, like TCP&#x2F;IP, load balancer, CDN, Proxy, WebRTC, long polling, Bloom Filters, Heartbeat, gossip protocol. I bet 80% people don’t directly interact with compute networking knowledges in real work. The reality is that, people are working with existing RPC&#x2F;REST frameworks, in some places those frameworks are internal proprietary. Who give a fxck about partitioning, replication of the data if you are already using managed services like DynamoDB? Why do you want me to choose from SQL and NoSQL? Share we use Google Spanner, a fking distributed fully managed scalable SQL db that support transactions! </p><p>This is a really bad time for tech interviews, not only because there are dozen of thousands laid off folks on the market. Existing methods of assessing candidates feel obsolete.</p><p>Based on my observation, some innovative interviwers have adaopted OOD related questions in their interview, which sounds good, as they could simulate real work scenarios with those questions. The issue is that those type of questions can be subjective, especially when the questions are not well curated, and are just invented out of their mind.</p><p>Again, no matter whatever questions I get asked during my interview, I don’t care now, because you don’t know more than me.</p>]]></content>
     
@@ -33,17 +33,19 @@
     
     
     
+    <category term="career" scheme="https://xionwang.github.io/categories/career/"/>
+    
     
   </entry>
   
   <entry>
     <title>最近跳槽的一点感受</title>
-    <link href="https://xionwang.github.io/2021/07/09/thoughts-on-recent-job-hunts/"/>
-    <id>https://xionwang.github.io/2021/07/09/thoughts-on-recent-job-hunts/</id>
+    <link href="https://xionwang.github.io/2021/07/09/Thoughts-on-recent-job-hunts/"/>
+    <id>https://xionwang.github.io/2021/07/09/Thoughts-on-recent-job-hunts/</id>
     <published>2021-07-09T12:23:20.000Z</published>
-    <updated>2023-02-19T13:43:06.984Z</updated>
+    <updated>2024-01-10T05:14:56.874Z</updated>
     
-    <content type="html"><![CDATA[<p>最近组里的manager因为各种原因换组了，所以就提前告诉了我去年review的结果。不得不又一次开始跳槽。</p><p>这次跳槽之前，我已经有3年没有系统地刷题了，从5月开始到现在7月初，陆陆续续刷了300多道题，也算是找到了一点感觉。system design也是稍微摸清了一点门道，可惜大部分时候还是很难达到interviwer的bar。</p><p>先聊聊in general的感受吧。感觉covid期间，也许跳槽的人比以往要多，或许是因为大家都wfh，有更多的时间和空间跳槽；造成的结果就是每家公司的candidate可能更多，所以也会更加picky一点。</p><p>有的规模不太大的公司，bar可能比较高只招senior，或者根本就没什么headcount。这次跳槽，很多公司投了简历以后直接就收到reject了。比如zillow, peloton, okta, robinhood, coinbase, chewy, coupang等等。</p><p>有的公司拿到了面试，面试自我感觉也还可以，但是也被reject。比如cloudkitchen, adobe, docusign, mapbox, roblox。个人觉得这些公司面了很多人，然后想选一些rockstar engineer。没有通过这些面试，确实自己还有很多需要提高的地方。</p><p>着重吐槽一下某些不太愉快的interview experience。</p><p>Betterment和Adobe。某一轮一个interviwer，从头到尾非常不engaged，交流也不积极。Just watched me fail.</p><p>Bloomberg。有一轮算法题，我给出了一个正确的结果，有个interviwer自己看不懂我的解法，浪费了我10分钟。另外一轮，有一道OOD没有达到interviwer想要的效果，那个人说 “we are not recruiting code monkeys”。哈哈哈。</p><p>Ebay。有一轮面我的人，扯淡了25分钟，然后说我们开始做题吧，然后来了一句 you won’t finish it unless miracle happens。呵呵。</p><p>Mapbox有一轮behavior，可能是某个组的元老，直接鸽了一轮面试。隔了两天补上。在自家后院边晒太阳，边问我BQ。我大概知道我已经跪了。</p><p>感觉大部分公司算是比较professional，以上几家比较奇葩吧。</p><p>再说说面试的人。一点data point。电面了20家左右。<br>7白人：2 pass, 5 fail;<br>8亚裔(大陆台湾韩国泰国各种人都有): all pass;<br>5印度人：2 pass, 3 fail.</p><p>fail的8个电面里感觉有3家确实是我自己sb了，但是有5家左右按国人的标准就过了。所以个人觉得covid和trump的china virus这个事确实有点影响。</p><p>总而言之，通过这次跳槽经历，感觉美国的码农世界也越来越内圈了。以后轮到我面试别人的时候，我再也不会当圣母了，该fail就fail傻逼们。而且，我以后也不会考虑投一些不知名的小公司了。一是他们给的TC不一定competitive，而是他们的面试流程不一定规范，面试者的素质也参差不齐。与其浪费时间，不如好好准备大公司的面试。</p>]]></content>
+    <content type="html"><![CDATA[<p>最近组里的manager因为各种原因换组了，所以就提前告诉了我去年review的结果。不得不又一次开始跳槽。</p><p>这次跳槽之前，我已经有3年没有系统地刷题了，从5月开始到现在7月初，陆陆续续刷了300多道题，也算是找到了一点感觉。system design也是稍微摸清了一点门道，可惜大部分时候还是很难达到interviewer的bar。</p><p>先聊聊in general的感受吧。感觉covid期间，也许跳槽的人比以往要多，或许是因为大家都wfh，有更多的时间和空间跳槽；造成的结果就是每家公司的candidate可能更多，所以也会更加picky一点。</p><p>有的规模不太大的公司，bar可能比较高只招senior，或者根本就没什么headcount。这次跳槽，很多公司投了简历以后直接就收到reject了。比如zillow, peloton, okta, robinhood, coinbase, chewy, coupang等等。</p><p>有的公司拿到了面试，面试自我感觉也还可以，但是也被reject。比如cloudkitchen, adobe, docusign, mapbox, roblox。个人觉得这些公司面了很多人，然后想选一些rockstar engineer。没有通过这些面试，确实自己还有很多需要提高的地方。</p><p>着重吐槽一下某些不太愉快的interview experience。</p><p>Betterment和Adobe。某一轮一个interviwer，从头到尾非常不engaged。Just watched me fail.</p><p>Bloomberg。有一轮算法题，我给出了一个正确的结果，有个interviwer自己看不懂我的解法，浪费了我10分钟。另外一轮，有一道OOD没有达到interviewer想要的效果，那个人说 “we are not recruiting code monkeys”。哈哈哈。</p><p>Ebay。有一轮面我的人，扯淡了25分钟，然后说我们开始做题吧，然后来了一句 you won’t finish it unless miracle happens。</p><p>Mapbox有一轮behavior，可能是某个组的元老，直接鸽了一轮面试。隔了两天补上。在自家后院边晒太阳，边问我BQ。我大概知道我已经跪了。</p><p>感觉大部分公司算是比较professional，以上几家比较奇葩吧。</p><p>再说说面试的人。一点data point。电面了20家左右。<br>7白人：2 pass, 5 fail;<br>8亚裔(大陆台湾韩国泰国各种人都有): all pass;<br>5印度人：2 pass, 3 fail.</p><p>fail的8个电面里感觉有3家确实是我自己sb了，但是有5家左右按国人的标准就过了。所以个人觉得covid和trump的china virus这个事确实有点影响。</p><p>总而言之，通过这次跳槽经历，感觉美国的码农世界也越来越内圈了。以后轮到我面试别人的时候，还是得公事公办，不能参杂个人情感。而且，我以后也不会考虑投一些不知名的小公司了。一是他们给的TC不一定competitive，二是他们的面试流程不见得规范，面试者的素质也参差不齐。与其浪费时间，不如好好准备大公司的面试。</p>]]></content>
     
     
       
@@ -54,30 +56,30 @@
     
     
     
+    <category term="career" scheme="https://xionwang.github.io/categories/career/"/>
+    
     
   </entry>
   
   <entry>
-    <title>The dark side in job hunting</title>
-    <link href="https://xionwang.github.io/2015/11/10/The-Dark-Side-in-Job-Hunting/"/>
-    <id>https://xionwang.github.io/2015/11/10/The-Dark-Side-in-Job-Hunting/</id>
+    <title>The ugly side in job hunting</title>
+    <link href="https://xionwang.github.io/2015/11/10/The-ugly-side-in-job-hunting/"/>
+    <id>https://xionwang.github.io/2015/11/10/The-ugly-side-in-job-hunting/</id>
     <published>2015-11-10T08:33:34.000Z</published>
-    <updated>2023-03-23T08:45:02.102Z</updated>
+    <updated>2024-01-10T05:31:09.471Z</updated>
     
-    <content type="html"><![CDATA[<p>Recently, there has been a phenomenon spreading excessively like a disastrous virus in the forum I have been regularly checking. In certain threads, when the owner shares his&#x2F;her interview experience with other queasy job seekers like me, the replies below are kinda sarcastic – all of which is asking agog for the precious code and even screenshot, anticipating someone’s merciful reaction. Therefore, those folks who get the clemency to distribute his&#x2F;her assets become their angels. It looks quite like the interesting case, that single guys ask for torrent files in porno sites. The ironic similarity is that, both groups are leaving their email address and begging for the indefinite echoes.</p><p>But as I clearly remember when I registered my account, it was said in dignity that this is a serious forum assisting Chinese students in North America, and all discussions shall be related to the topic and meaningful. As the forum grows explosively these years, the rapid rise of user leads to the current weird situation that dumb replies accumulate and prevail. As a conscious and well-behaved part of this community, I am aware that maybe it’s time to make some change to this, and I have to boost their job hunting by other feasible means, anyway. Although I haven’t got any offer yet, I know I shouldn’t post something just like I am longing for torrent files of Aoi Sora’s movies. Things must have to be done in a decent way.</p><p>I’m just trying to analyze what those folks are thinking of when they just leave their email address out there, like a robot, without even realizing that their reply to the thread could’ve been considered as spam by the admins. I am sick of those shit who can do anything awkward, or appear ingratiating, just in order to get some shitstain. The ruth to other askers may have to be the brutality to yourself. I have been wrecked for a couple of times, though. I got surprised when I check somebody’s profile and found out that he was demanding some benefits while he had not even contributed anything before. No response may be good for them in the long run. I don’t know how this shit works out among South Asians, but I know cheaters are gonna always be cheaters.</p><p>On the contrary, I have found out that there exists some kind of tiny flaws or traps in what the angeles have shared. It can be a little change of a code block that makes itself cannot compile, and it’s not easy to figure it out without fundamental understanding of required knowledge. I’d agree more or less with this kind of tricks, as it effectively filters those who simply copy and paste. Needless to say, some thread is filled with rumors, or there are somebody seriously talking bullshit to the others who doesn’t even know any bit of bullshit. And the bullshit keeps spreading and makes dumbass believes the bullshit he has got is what things should be like.</p><p>What the hell is going on? Que mierda.</p>]]></content>
+    <content type="html"><![CDATA[<p>Recently, there is a phenomenon spreading excessively like a virus in the forum that I am regularly checking. In certain threads, when the owner shares their interview experience with other job seekers like me, the replies below are kinda hilarious – all of them are eagerly asking for the code implementation and even screenshots. Therefore, those folks who get the kindness to share become their angels. It appears interesting to me, because the fact that people leaving their email addresses and some warm short messages in the threads resembles another so-called 1024 forum. </p><p>But I clearly remember when I registered my account, it was said rightly that this is a serious forum that aims to help Chinese students in North America, and all discussions shall be meaningful and related to the topic. As the forum grows explosively these years, the rapid growth of user base leads to the current weird situation that dumb replies accumulate and prevail. As a conscious and well-behaved part of this community, I am aware that maybe it’s time to make some change, and things needs to be done in a more decent way. Although I haven’t got any offer yet.</p><p>I’m just trying to analyze what those folks are thinking of when they just leave their email address out there, like a bot, without even realizing that their replies are becoming spams. I am slowly getting sick of it, and I bet some others are, too. Now this leads to that the quality of the posts on the forum going downwards. I always got surprised when I checked somebody’s profile and found out that they were demanding some info while he had not even contributed anything yet. No response may be good for them in the long run. After all, everything has its lifecycle. A few years ago, this forum was cool, but now it’s slowly transitioning into something like mitbbs.</p><p>What the hell is going on? Sadge.</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Recently, there has been a phenomenon spreading excessively like a disastrous virus in the forum I have been regularly checking. In certa</summary>
+    <summary type="html">&lt;p&gt;Recently, there is a phenomenon spreading excessively like a virus in the forum that I am regularly checking. In certain threads, when th</summary>
       
     
     
     
+    <category term="career" scheme="https://xionwang.github.io/categories/career/"/>
     
-    <category term="Amazon" scheme="https://xionwang.github.io/tags/Amazon/"/>
-    
-    <category term="Job" scheme="https://xionwang.github.io/tags/Job/"/>
     
   </entry>
   
