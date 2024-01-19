@@ -4,13 +4,16 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB67FJGET8"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    var host = window.location.hostname;
+    if (host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "G-RB67FJGET8");
+      gtag("config", "G-RB67FJGET8");
+    }
   </script>
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -73,6 +76,22 @@
                 
                 <div class="archive-list">
     <ul class="archive">
+        
+        <li>
+            <span class="archive-date">2024.01.15</span>
+            <div class="archive-main">
+                <a class="archive-title" href="/2024/01/15/bazel-learning-notes-1/">Bazel学习笔记(1)</a>
+                <!-- <a class="read-more" href="/2024/01/15/bazel-learning-notes-1/"> ... </a> -->
+            </div>
+        </li>
+        
+        <li>
+            <span class="archive-date">2024.01.13</span>
+            <div class="archive-main">
+                <a class="archive-title" href="/2024/01/13/The-art-of-divide-and-conquer/">The art of divide and conquer</a>
+                <!-- <a class="read-more" href="/2024/01/13/The-art-of-divide-and-conquer/"> ... </a> -->
+            </div>
+        </li>
         
         <li>
             <span class="archive-date">2023.02.24</span>

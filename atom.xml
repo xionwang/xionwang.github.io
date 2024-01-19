@@ -6,7 +6,7 @@
   <link href="https://xionwang.github.io/atom.xml" rel="self"/>
   
   <link href="https://xionwang.github.io/"/>
-  <updated>2024-01-10T05:36:28.597Z</updated>
+  <updated>2024-01-19T11:46:31.432Z</updated>
   <id>https://xionwang.github.io/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Bazel学习笔记(1)</title>
+    <link href="https://xionwang.github.io/2024/01/15/bazel-learning-notes-1/"/>
+    <id>https://xionwang.github.io/2024/01/15/bazel-learning-notes-1/</id>
+    <published>2024-01-16T03:58:25.000Z</published>
+    <updated>2024-01-19T11:46:31.432Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文主要过了一遍Bazel的基本概念，主要基于Bazel的官方文档（<a href="https://bazel.build/concepts/build-ref%EF%BC%89%E3%80%82">https://bazel.build/concepts/build-ref）。</a></p><p>个人认为Platforms, constraints, toolchain和hermeticity对于上手Bazel不是特别重要，就不详细看了。</p><h2 id="Workspace-packages-amp-targets"><a href="#Workspace-packages-amp-targets" class="headerlink" title="Workspace, packages &amp; targets"></a>Workspace, packages &amp; targets</h2><p><a href="https://bazel.build/concepts/build-ref">https://bazel.build/concepts/build-ref</a></p><ul><li>WORKSPACE </li><li>PACKAGES</li><li>BUILD</li><li>Targets</li></ul><p>一个 WORKSPACE 可以有很多 PACKAGE, 每个 PACKAGE 对应一个 BUILD 文件。每个 BUILD 文件中，可定义很多 build targets 。</p><p>Target 分两类，file 和 rule。</p><p>file分为source file，就是平时写的code源代码；和生成的file，比如c++, .cc file编译后产生的binary二进制文件，或者是proto file codegen 以后生成的stub classes。</p><p>rule定义了怎么用input生成output。input可以是file，和其他rule。rule生成的artifact还是属于这个package。</p><h2 id="Labels"><a href="#Labels" class="headerlink" title="Labels"></a>Labels</h2><p><a href="https://bazel.build/concepts/labels">https://bazel.build/concepts/labels</a></p><p>Label是一个target的ID。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@@myrepo//my/app/main:app_binary</span><br></pre></td></tr></table></figure><p>@@canonical repo name vs @apparent repo name<br>apprent repo name可以认为是在某个context (workspace&#x2F;module) 中一个repo的昵称(alias)。</p><p>在当前workspace中，可以省略repo名。在相同package中，可以省略target之前的部分（workspace+package）。</p><p>BUILD文件中通过调用rule来定义一个target。每个rule都有name，和一系列的attributes。常见的attribute有integer，label，list of labels， string，list of string等等类型。</p><h2 id="BUILD文件"><a href="#BUILD文件" class="headerlink" title="BUILD文件"></a>BUILD文件</h2><p>可以通过load()引用extension .bzl文件中的function，rule或者常量。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load(&quot;//foo/bar:file.bzl&quot;, library_alias = &quot;some_library&quot;)</span><br></pre></td></tr></table></figure><p>runfiles文件夹: 有的target会把data，和其他transitive rule放在runfile文件夹里，方便部署。</p><h2 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h2><p><a href="https://bazel.build/concepts/dependencies">https://bazel.build/concepts/dependencies</a></p><p>Declared dependency graph must be an overapproximation (superset) of actual dependency.</p><p>在当前project中，如果引用了transitive dependency中的library，必须在当前project中直接depend on，不然transitive dependency中有改动的时候，可能会break当前的project。</p><h3 id="Type-of-dependencies"><a href="#Type-of-dependencies" class="headerlink" title="Type of dependencies"></a>Type of dependencies</h3><ul><li>src</li><li>deps</li><li>data</li></ul><h3 id="filegroup-glob"><a href="#filegroup-glob" class="headerlink" title="filegroup, glob"></a>filegroup, glob</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">filegroup(</span><br><span class="line">        name = &#x27;my_data&#x27;,</span><br><span class="line">        srcs = glob([&#x27;my_unittest_data/*&#x27;])</span><br><span class="line">)</span><br></pre></td></tr></table></figure><h2 id="Visibility"><a href="#Visibility" class="headerlink" title="Visibility"></a>Visibility</h2><p>Target visibility控制谁能depend当前的target。</p><ul><li><code>//visibility:public</code></li><li><code>//visibility:private</code></li><li><code>//foo/bar:__pkg__</code></li><li><code>//foo/bar:__subpackages__</code></li><li><code>//some_pkg:my_package_group</code></li></ul><p>load visibility 控制<code>.bzl</code>文件的vibility。</p><h2 id="Hermeticity"><a href="#Hermeticity" class="headerlink" title="Hermeticity"></a>Hermeticity</h2><p>类似idempotency的概念。不受host machine的影响。只要build tool，compiler，和dependencies不变，build的结果就不变。</p><h2 id="Constraint，-Platforms-and-Toolchain"><a href="#Constraint，-Platforms-and-Toolchain" class="headerlink" title="Constraint， Platforms and Toolchain"></a>Constraint， Platforms and Toolchain</h2><p>Platform包含很多constraint。让Bazel可以支持不同的平台，（操作系统，处理器架构等等）。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本文主要过了一遍Bazel的基本概念，主要基于Bazel的官方文档（&lt;a href=&quot;https://bazel.build/concepts/build-ref%EF%BC%89%E3%80%82&quot;&gt;https://bazel.build/concepts/build-r</summary>
+      
+    
+    
+    
+    <category term="bazel" scheme="https://xionwang.github.io/categories/bazel/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>The art of divide and conquer</title>
+    <link href="https://xionwang.github.io/2024/01/13/The-art-of-divide-and-conquer/"/>
+    <id>https://xionwang.github.io/2024/01/13/The-art-of-divide-and-conquer/</id>
+    <published>2024-01-13T12:24:08.000Z</published>
+    <updated>2024-01-14T06:51:27.217Z</updated>
+    
+    <content type="html"><![CDATA[<p>When I first knew the term “Divide and Conquer”, it was from Intro to Algorithm textbook, back when I was in grad school. It’s a way to solve big problems by breaking them into smaller problems and tackle each of them. I had little feelings and I didn’t dive deep or think big about it, after solving asignment questions with the technique.</p><p>Over the years, I slowly realized that this is not only about computer science. Instead, I see its application in different domains.</p><p>UK arunachal, pakistan bangladesh, india<br>US korea, taiwan china</p><p>cloud computing, solve problems, break up<br>TPS Generator</p><p>visa, india, China, ROW</p><p>break up chinese team, into sub groups</p><p>孙子兵法</p><p>at then end of day, I’m not POTUS, I’m not </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;When I first knew the term “Divide and Conquer”, it was from Intro to Algorithm textbook, back when I was in grad school. It’s a way to s</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Tech interview is a mind game nowadays</title>
     <link href="https://xionwang.github.io/2023/02/24/Tech-interview-is-a-mind-game-nowadays/"/>
     <id>https://xionwang.github.io/2023/02/24/Tech-interview-is-a-mind-game-nowadays/</id>
     <published>2023-02-24T09:12:43.000Z</published>
-    <updated>2024-01-10T05:36:28.597Z</updated>
+    <updated>2024-01-19T11:46:40.798Z</updated>
     
     <content type="html"><![CDATA[<p>Yes, I am creating yet another post about tech interviews, because I am looking for a new job, again. I have to, because as you may know, all big names are doing layoffs nowaways, starting from Meta’s since last November.</p><p>When I graduated in 2015, Leetcode had 200 or 300-ish coding questions. When I was looking a job in 2018, the count was probably 800+, and the number might be 1600+ in 2021. As the time of writing, it’s 2573. The numbers do speak, that coding interviews for Software Engineer positions are definitely getting out of control. Completing all 2k+ questions doesn’t sound like a realistic goal, especially for job seekers who have very limited timeframe. </p><p>On the other hand, I did get entitled interviewers who was calling those who could only do LC questions code monkey. Although I was not a 100% code monkey, I could feel the insecurity from the interviwers. You call other folks code monkeys because you can’t even solve straightforward questions. C’mon, you were bragging about “I’d prefer solve real world, production problems”, because that’s what you’ve been grinding on. Like nobody is supposed to master kubernetes as a deployment system, if that’s a hard requirement, you guys are missing pretty much all candidates from AWS and Google, because they probably use internal systems like Borg, Nebula, ECS, Fargate, etc.</p><p>In my opinion, conducting coding interviews with LC-style questions is by far the most fair way. We all have to master common data structures, patterns, algorithms. So, as a suggestion for interviewees, be smart on griding LC questions.</p><p>Skip questions that might not be asked. </p><ul><li>Some questions are too hard. I bet most non-code monkey interviewers can’t do it either.</li><li>Or they just simply don’t want you. (See below screenshot)</li></ul><p><a href="https://leetcode.com/problems/sum-of-two-integers/editorial/" target="_blank"><img src="/images/20230224.png"></a></p><p>Always believe in yourself, that your coding ability is stronger than the interviewer, and tell yourself, “This guy who’s interviewing me is a fking dumb-ass. My LC contest ranking is 5% of the world. You know nothing about coding at all, snowflake!”.</p><p>The same situation goes for system design related questions.</p><p>In real work, your interviewer might be creating CRUD applications on a daily basis, or writing unit test every night to improve the coverage from 75% to 80%. And you are expected to design a highly scalable, durable and available service that serves 100M daily actively users globally, with read and write heavy traffic, and should handle 5x traffic spikes, without losing data or customers’ money or impacting revenue. Lmao.</p><p>Another funny thing is that a lot of buzzwords are used excessively in system design prep materials, like TCP&#x2F;IP, load balancer, CDN, Proxy, WebRTC, long polling, Bloom Filters, Heartbeat, gossip protocol. I bet 80% people don’t directly interact with compute networking knowledges in real work. The reality is that, people are working with existing RPC&#x2F;REST frameworks, in some places those frameworks are internal proprietary. Who give a fxck about partitioning, replication of the data if you are already using managed services like DynamoDB? Why do you want me to choose from SQL and NoSQL? Share we use Google Spanner, a fking distributed fully managed scalable SQL db that support transactions! </p><p>This is a really bad time for tech interviews, not only because there are dozen of thousands laid off folks on the market. Existing methods of assessing candidates feel obsolete.</p><p>Based on my observation, some innovative interviwers have adaopted OOD related questions in their interview, which sounds good, as they could simulate real work scenarios with those questions. The issue is that those type of questions can be subjective, especially when the questions are not well curated, and are just invented out of their mind.</p><p>Again, no matter whatever questions I get asked during my interview, I don’t care now, because you don’t know more than me.</p>]]></content>
     
@@ -43,7 +85,7 @@
     <link href="https://xionwang.github.io/2021/07/09/Thoughts-on-recent-job-hunts/"/>
     <id>https://xionwang.github.io/2021/07/09/Thoughts-on-recent-job-hunts/</id>
     <published>2021-07-09T12:23:20.000Z</published>
-    <updated>2024-01-10T05:14:56.874Z</updated>
+    <updated>2024-01-19T11:46:53.459Z</updated>
     
     <content type="html"><![CDATA[<p>最近组里的manager因为各种原因换组了，所以就提前告诉了我去年review的结果。不得不又一次开始跳槽。</p><p>这次跳槽之前，我已经有3年没有系统地刷题了，从5月开始到现在7月初，陆陆续续刷了300多道题，也算是找到了一点感觉。system design也是稍微摸清了一点门道，可惜大部分时候还是很难达到interviewer的bar。</p><p>先聊聊in general的感受吧。感觉covid期间，也许跳槽的人比以往要多，或许是因为大家都wfh，有更多的时间和空间跳槽；造成的结果就是每家公司的candidate可能更多，所以也会更加picky一点。</p><p>有的规模不太大的公司，bar可能比较高只招senior，或者根本就没什么headcount。这次跳槽，很多公司投了简历以后直接就收到reject了。比如zillow, peloton, okta, robinhood, coinbase, chewy, coupang等等。</p><p>有的公司拿到了面试，面试自我感觉也还可以，但是也被reject。比如cloudkitchen, adobe, docusign, mapbox, roblox。个人觉得这些公司面了很多人，然后想选一些rockstar engineer。没有通过这些面试，确实自己还有很多需要提高的地方。</p><p>着重吐槽一下某些不太愉快的interview experience。</p><p>Betterment和Adobe。某一轮一个interviwer，从头到尾非常不engaged。Just watched me fail.</p><p>Bloomberg。有一轮算法题，我给出了一个正确的结果，有个interviwer自己看不懂我的解法，浪费了我10分钟。另外一轮，有一道OOD没有达到interviewer想要的效果，那个人说 “we are not recruiting code monkeys”。哈哈哈。</p><p>Ebay。有一轮面我的人，扯淡了25分钟，然后说我们开始做题吧，然后来了一句 you won’t finish it unless miracle happens。</p><p>Mapbox有一轮behavior，可能是某个组的元老，直接鸽了一轮面试。隔了两天补上。在自家后院边晒太阳，边问我BQ。我大概知道我已经跪了。</p><p>感觉大部分公司算是比较professional，以上几家比较奇葩吧。</p><p>再说说面试的人。一点data point。电面了20家左右。<br>7白人：2 pass, 5 fail;<br>8亚裔(大陆台湾韩国泰国各种人都有): all pass;<br>5印度人：2 pass, 3 fail.</p><p>fail的8个电面里感觉有3家确实是我自己sb了，但是有5家左右按国人的标准就过了。所以个人觉得covid和trump的china virus这个事确实有点影响。</p><p>总而言之，通过这次跳槽经历，感觉美国的码农世界也越来越内圈了。以后轮到我面试别人的时候，还是得公事公办，不能参杂个人情感。而且，我以后也不会考虑投一些不知名的小公司了。一是他们给的TC不一定competitive，二是他们的面试流程不见得规范，面试者的素质也参差不齐。与其浪费时间，不如好好准备大公司的面试。</p>]]></content>
     
@@ -66,7 +108,7 @@
     <link href="https://xionwang.github.io/2015/11/10/The-ugly-side-in-job-hunting/"/>
     <id>https://xionwang.github.io/2015/11/10/The-ugly-side-in-job-hunting/</id>
     <published>2015-11-10T08:33:34.000Z</published>
-    <updated>2024-01-10T05:31:09.471Z</updated>
+    <updated>2024-01-19T11:46:48.735Z</updated>
     
     <content type="html"><![CDATA[<p>Recently, there is a phenomenon spreading excessively like a virus in the forum that I am regularly checking. In certain threads, when the owner shares their interview experience with other job seekers like me, the replies below are kinda hilarious – all of them are eagerly asking for the code implementation and even screenshots. Therefore, those folks who get the kindness to share become their angels. It appears interesting to me, because the fact that people leaving their email addresses and some warm short messages in the threads resembles another so-called 1024 forum. </p><p>But I clearly remember when I registered my account, it was said rightly that this is a serious forum that aims to help Chinese students in North America, and all discussions shall be meaningful and related to the topic. As the forum grows explosively these years, the rapid growth of user base leads to the current weird situation that dumb replies accumulate and prevail. As a conscious and well-behaved part of this community, I am aware that maybe it’s time to make some change, and things needs to be done in a more decent way. Although I haven’t got any offer yet.</p><p>I’m just trying to analyze what those folks are thinking of when they just leave their email address out there, like a bot, without even realizing that their replies are becoming spams. I am slowly getting sick of it, and I bet some others are, too. Now this leads to that the quality of the posts on the forum going downwards. I always got surprised when I checked somebody’s profile and found out that they were demanding some info while he had not even contributed anything yet. No response may be good for them in the long run. After all, everything has its lifecycle. A few years ago, this forum was cool, but now it’s slowly transitioning into something like mitbbs.</p><p>What the hell is going on? Sadge.</p>]]></content>
     

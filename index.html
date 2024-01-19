@@ -4,13 +4,16 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB67FJGET8"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    var host = window.location.hostname;
+    if (host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "G-RB67FJGET8");
+      gtag("config", "G-RB67FJGET8");
+    }
   </script>
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -72,6 +75,25 @@
 
                 
                 <div class="post-list">
+    
+    <div class="post">
+        <a class="post-title" href="/2024/01/15/bazel-learning-notes-1/">Bazel学习笔记(1)</a>
+        <div class="post-except">
+            本文主要过了一遍Bazel的基本概念，主要基于Bazel的官方文档（https://bazel.build/concepts/build-ref）。
+个人认为Platforms, constraints, toolchain和hermeticity对于上手Ba
+            <a class="read-more" href="/2024/01/15/bazel-learning-notes-1/"> ... </a>
+        </div>
+        <div class="post-date">2024.01.15</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2024/01/13/The-art-of-divide-and-conquer/">The art of divide and conquer</a>
+        <div class="post-except">
+            When I first knew the term “Divide and Conquer”, it was from Intro to Algorithm textbook, back when I was in grad school. It’s a w
+            <a class="read-more" href="/2024/01/13/The-art-of-divide-and-conquer/"> ... </a>
+        </div>
+        <div class="post-date">2024.01.13</div>
+    </div>
     
     <div class="post">
         <a class="post-title" href="/2023/02/24/Tech-interview-is-a-mind-game-nowadays/">Tech interview is a mind game nowadays</a>
