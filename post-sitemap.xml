@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://xionwang.github.io/2024/01/15/bazel-learning-notes-1/</loc>
+        <lastmod>2024-01-19T11:50:30.893Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://xionwang.github.io/2021/07/09/Thoughts-on-recent-job-hunts/</loc>
         <lastmod>2024-01-19T11:46:53.459Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -27,14 +35,6 @@
     <url>
         <loc>https://xionwang.github.io/2023/02/24/Tech-interview-is-a-mind-game-nowadays/</loc>
         <lastmod>2024-01-19T11:46:40.798Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://xionwang.github.io/2024/01/15/bazel-learning-notes-1/</loc>
-        <lastmod>2024-01-19T11:46:31.432Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
