@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RB67FJGET8"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-RB67FJGET8");
+    }
+  </script>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap" rel="stylesheet">
+
+  <!-- title -->
+   
+  <title>The art of divide and conquer - Roman Wang</title>
+   
+
+  <!-- open graph -->
+  <meta name="description" content="When I first learned the term “Divide and Conquer”, it was from the Intro to Algorithm textbook, back when I was in grad school. It’s a way to solve big problems by breaking them into smaller problems">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The art of divide and conquer">
+<meta property="og:url" content="https://xionwang.github.io/2024/02/09/The-art-of-divide-and-conquer/index.html">
+<meta property="og:site_name" content="Roman Wang">
+<meta property="og:description" content="When I first learned the term “Divide and Conquer”, it was from the Intro to Algorithm textbook, back when I was in grad school. It’s a way to solve big problems by breaking them into smaller problems">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-02-09T12:24:08.000Z">
+<meta property="article:modified_time" content="2024-02-10T07:35:51.317Z">
+<meta property="article:author" content="Roman Wang">
+<meta name="twitter:card" content="summary">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://xionwang.github.io/2024/02/09/The-art-of-divide-and-conquer/">
+  
+  <!-- Favicon -->
+  <!-- <link rel="shortcut icon" href="/img/favicon.ico" /> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+ 
+<link rel="stylesheet" href="/css/style.css">
+ 
+<link rel="stylesheet" href="/css/markdown.css">
+ 
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Roman Wang" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">Roman Wang</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            The art of divide and conquer
+        </div>
+        <div class="post-meta">
+            2024-02-09 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p>When I first learned the term “Divide and Conquer”, it was from the Intro to Algorithm textbook, back when I was in grad school. It’s a way to solve big problems by breaking them into smaller problems and tackling each of them. I had little feelings and didn’t dive deep or thought big about it, instead I only wanted to solve assignment questions and get an A grade.</p>
+<p>Over the years, I slowly realized that this is not only about computer science. Instead, I see its application in different domains.</p>
+<p>Last century, the UK left some mess by drawing a McMahon Line which then caused disputes between India and China on the so-called Arunachal pradesh. After WW2, we had split North and South Korea, split Republic of China (Taiwan and Mainland), East and West Germany, to name a few. Maybe a set of smaller and weaker countries is better for Uncle Sam’s interests.</p>
+<p>Not to mention its application in distributed systems, GFS, Bigtable, etc. We use cheap commodity computers to build something great in the cloud.</p>
+<p>In today’s USA, the modern-day slavery H1B visa is being played at its finest. People from India: Why do I need to wait for 20 years? It’s unfair that the rest of the world doesn’t have priority dates! As a result, people from different countries hate each other, instead of those who made the rules.</p>
+<p>After all, I am not a politician or policy maker, nor am I interested in solving those challenging problems or counter them. Instead, I now always approach daily life problems from the perspective of  “divide and conquer”. </p>
+<p>As a software development manager or PM, why do they do sprint planning and daily standups? Because they wanna keep tabs on project status and eventually deliver a big project. We “divide” a project into multiple milestones and break them into epics, stories and each small task; then we”conquer” each task by assigning it to team members. Assign design tasks to senior engineers, and ops tasks to cheap SDE1s. What if someone is underperforming? Give them PIP, ez pz. Just like you would move off a dead server, and switch traffic to other stand-by servers in your high-availability, fault tolerant systems.</p>
+<p>As a person who wants to make a living and make ends meet, let’s say you want to make half a million a year, that’s equivalent to 10k a week, how do you achieve it? Maybe a senior&#x2F;principal software engineer, or some quant researchers can make it. But not everyone has the opportunity to have that fast career growth or education.</p>
+<p>How does a mid level engineer who makes 300k annually fill the 200k gap? Some people’s solution is to do side-gigs. Become a real estate agent. Do some contractor developer work, etc. IMO this is not scalable. Too much overhead in context switching, and maybe conflicts in schedule. Maybe some companies with excellent WLB can support it. I wouldn’t say the company names though.</p>
+<p>What if a delivery driver wanna make 0.5M per year? Let’s say each delivery cost 0.5 hour with an earning of $8. That translates to 384 dollars per day and 2.7k per week, assuming a driver is working 24&#x2F;7 without needing to refuel the car, and always getting orders instantly after each delivery. Doesn’t sound realistic. It needs to be 3x more efficient to meet the goal. Doordash&#x2F;Uber can help optimize by giving 4 orders from the same apartment&#x2F;destination to the same restaurant to the driver.</p>
+<p>I can keep going on different scenarios but I choose not to. As I’ve realized that the biggest concerns as an individual to apply D&amp;C technique is about context switching and scalability. To avoid context switching and scale horizontally as a person, one can work on stuff as similar as possible.. If you are already familiar with Scala, maybe do not work on a side project with C++. Unfortunately, this attitude is always a red-flag in your manager’s point of view. They always want to see your growth and squeeze every bit out of you, but that would be another post.</p>
+<p>To scale horizontally as a human being? Well, not much I can do, other than live a healthy lifestyle. Eat well, sleep well, and work out.</p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+
+
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        
+        var disqus_config = function () {
+        this.page.url = 'https://xionwang.github.io/2024/02/09/The-art-of-divide-and-conquer/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://xionwang.github.io/2024/02/09/The-art-of-divide-and-conquer/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://' + 'romanwang-1' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+                <div class="footer">
+    <span>Copyright © 2024 Roman Wang</span>
+    <span>Powered by <a target="_blank" rel="external nofollow noopener noreferrer" href="https://hexo.io">Hexo</a> with <a target="_blank" rel="noopener" href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>
