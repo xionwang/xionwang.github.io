@@ -5,13 +5,16 @@
     src="https://www.googletagmanager.com/gtag/js?id=G-RB67FJGET8"
   ></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+    var host = window.location.hostname;
+    if (host != "localhost") {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag("config", "G-RB67FJGET8");
+      gtag("config", "G-RB67FJGET8");
+    }
   </script>
 
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -23,6 +26,11 @@
     name="viewport"
   />
   <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap" rel="stylesheet">
+
   <!-- title -->
   <% if (page.total > 1){ %> <% if (page.current === 1) { %>
   <title><%= config.title %> - <%= config.subtitle %></title>
